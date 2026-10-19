@@ -68,7 +68,7 @@ export const AdminDashboard: React.FC = () => {
 
         <button
           onClick={handleResetData}
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-colors border border-slate-700 cursor-pointer"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-all duration-120 ease-out border border-slate-700 cursor-pointer active:scale-[0.98]"
         >
           <RotateCcw className="w-3.5 h-3.5" />
           <span>Återställ demodata</span>
@@ -278,7 +278,7 @@ export const AdminDashboard: React.FC = () => {
           <div className="flex justify-end pt-2">
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition-colors cursor-pointer shadow-sm"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs transition-all duration-120 ease-out cursor-pointer shadow-xs active:scale-[0.98]"
             >
               <Save className="w-4 h-4 text-cyan-400" />
               <span>Spara ändrade prisregler</span>

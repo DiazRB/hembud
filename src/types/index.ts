@@ -11,6 +11,13 @@ export type DeliveryStatus =
   | 'delivered'     // Levererad
   | 'cancelled';    // Avbruten
 
+export type VehicleType = 
+  | 'Inget fordon (Gående / Kollektivtrafik)' 
+  | 'Cykel/Lådcykel' 
+  | 'Personbil' 
+  | 'Skåpbil' 
+  | 'Elbil';
+
 export interface User {
   id: string;
   name: string;
@@ -26,7 +33,7 @@ export interface User {
   // Courier specific
   rating?: number;
   totalDeliveries?: number;
-  vehicleType?: 'Cykel/Lådcykel' | 'Personbil' | 'Skåpbil' | 'Elbil';
+  vehicleType?: VehicleType | string;
   vehicleRegNumber?: string;
   swishNumber?: string;
   bankAccount?: string;

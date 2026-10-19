@@ -11,22 +11,30 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t border-slate-900 mt-12 sm:mt-20">
+    <footer className="bg-slate-950 text-slate-300 border-t border-slate-900/90 mt-12 sm:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center">
-                <svg className="w-6 h-6 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center shrink-0 shadow-sm">
+                <svg 
+                  className="w-5.5 h-5.5 text-cyan-400" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2.2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
                   <path d="M16.5 9.4 7.55 4.24a1.78 1.78 0 0 0-2.5 1.55v12.42a1.78 1.78 0 0 0 2.5 1.55L16.5 14.6a1.78 1.78 0 0 0 0-3.2z" />
                   <path d="m21 12-4.5 2.6" />
                   <path d="m21 12-4.5-2.6" />
                   <path d="M3 12h3" />
                 </svg>
               </div>
-              <span className="text-xl font-extrabold tracking-tight text-white">
+              <span className="text-xl font-extrabold tracking-tight text-white whitespace-nowrap">
                 Hem<span className="text-cyan-400">Bud</span>
               </span>
             </div>
@@ -41,14 +49,14 @@ export const Footer: React.FC = () => {
 
           {/* Tjänster */}
           <div className="space-y-3">
-            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-100">
+            <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-200">
               Våra tjänster
             </h4>
             <ul className="space-y-1 text-sm text-slate-400">
               <li>
                 <button
                   onClick={() => handleNav('booking', 'package')}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full"
+                  className="hover:text-white transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full origin-left active:scale-[0.98] motion-reduce:transition-none"
                 >
                   Skicka paket från dörr till dörr
                 </button>
@@ -56,7 +64,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => handleNav('booking', 'marketplace')}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full"
+                  className="hover:text-white transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full origin-left active:scale-[0.98] motion-reduce:transition-none"
                 >
                   Hämta mitt köp (Blocket/Tradera)
                 </button>
@@ -64,7 +72,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => handleNav('booking', 'agent_pickup')}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full"
+                  className="hover:text-white transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full origin-left active:scale-[0.98] motion-reduce:transition-none"
                 >
                   Hämta hos ombud (PostNord, DHL)
                 </button>
@@ -72,10 +80,10 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => handleNav('booking')}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center gap-1.5 w-full text-cyan-400 font-semibold"
+                  className="hover:text-cyan-300 transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center gap-1.5 w-full text-cyan-400 font-semibold origin-left active:scale-[0.98] motion-reduce:transition-none group"
                 >
                   <span>Boka transport direkt</span>
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ArrowUpRight className="w-4 h-4 transition-transform duration-120 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </li>
             </ul>
@@ -83,7 +91,7 @@ export const Footer: React.FC = () => {
 
           {/* För bud & Partners */}
           <div className="space-y-3">
-            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-100">
+            <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-200">
               För bud & transportörer
             </h4>
             <ul className="space-y-1 text-sm text-slate-400">
@@ -93,7 +101,7 @@ export const Footer: React.FC = () => {
                     switchRole('courier');
                     handleNav('courier');
                   }}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full"
+                  className="hover:text-white transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full origin-left active:scale-[0.98] motion-reduce:transition-none"
                 >
                   Se lediga uppdrag på marknaden
                 </button>
@@ -104,7 +112,7 @@ export const Footer: React.FC = () => {
                     switchRole('courier');
                     handleNav('courier');
                   }}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full"
+                  className="hover:text-white transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full origin-left active:scale-[0.98] motion-reduce:transition-none"
                 >
                   Körningsvillkor & ersättning
                 </button>
@@ -112,7 +120,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => handleNav('home')}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full"
+                  className="hover:text-white transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full origin-left active:scale-[0.98] motion-reduce:transition-none"
                 >
                   100% transparent budersättning
                 </button>
@@ -123,7 +131,7 @@ export const Footer: React.FC = () => {
                     switchRole('admin');
                     handleNav('admin');
                   }}
-                  className="hover:text-cyan-400 transition-colors cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full text-xs text-slate-500"
+                  className="hover:text-slate-300 transition-all duration-120 ease-out cursor-pointer text-left py-2 min-h-[40px] flex items-center w-full text-xs text-slate-500 origin-left active:scale-[0.98] motion-reduce:transition-none"
                 >
                   Plattformsinställningar (Admin)
                 </button>
@@ -133,7 +141,7 @@ export const Footer: React.FC = () => {
 
           {/* Kontakt & Verifiering med klickbara telefon och e-post */}
           <div className="space-y-3">
-            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-100">
+            <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-slate-200">
               Kontakt & Support
             </h4>
             <div className="space-y-2 text-sm text-slate-400">
@@ -143,14 +151,14 @@ export const Footer: React.FC = () => {
               </div>
               <a
                 href="mailto:kontakt@hembud.se"
-                className="flex items-center gap-2.5 py-2 min-h-[44px] hover:text-cyan-400 transition-colors"
+                className="flex items-center gap-2.5 py-2 min-h-[44px] hover:text-white transition-all duration-120 ease-out origin-left active:scale-[0.98] motion-reduce:transition-none"
               >
                 <Mail className="w-4 h-4 text-cyan-400 shrink-0" />
                 <span>kontakt@hembud.se</span>
               </a>
               <a
                 href="tel:081204000"
-                className="flex items-center gap-2.5 py-2 min-h-[44px] hover:text-cyan-400 transition-colors"
+                className="flex items-center gap-2.5 py-2 min-h-[44px] hover:text-white transition-all duration-120 ease-out origin-left active:scale-[0.98] motion-reduce:transition-none"
               >
                 <Phone className="w-4 h-4 text-cyan-400 shrink-0" />
                 <span>08-120 40 00 (Vardagar 08–20)</span>
@@ -163,7 +171,7 @@ export const Footer: React.FC = () => {
                     document.getElementById('faq-sektion')?.scrollIntoView({ behavior: 'smooth' });
                   }, 100);
                 }}
-                className="flex items-center gap-2.5 py-2 min-h-[44px] text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer text-left font-medium"
+                className="flex items-center gap-2.5 py-2 min-h-[44px] text-cyan-400 hover:text-cyan-300 transition-all duration-120 ease-out cursor-pointer text-left font-medium origin-left active:scale-[0.98] motion-reduce:transition-none"
               >
                 <span>Vanliga frågor & svar (FAQ)</span>
               </button>
@@ -177,11 +185,11 @@ export const Footer: React.FC = () => {
             © 2026 HemBud Sverige AB. Alla rättigheter förbehållna.
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-            <span>Allmänna transportvillkor</span>
+            <span className="hover:text-slate-400 transition-colors duration-100 cursor-default">Allmänna transportvillkor</span>
             <span aria-hidden="true">·</span>
-            <span>Integritetspolicy</span>
+            <span className="hover:text-slate-400 transition-colors duration-100 cursor-default">Integritetspolicy</span>
             <span aria-hidden="true">·</span>
-            <span>Cookies</span>
+            <span className="hover:text-slate-400 transition-colors duration-100 cursor-default">Cookies</span>
           </div>
         </div>
       </div>

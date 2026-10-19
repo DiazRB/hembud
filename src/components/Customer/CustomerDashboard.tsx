@@ -271,24 +271,24 @@ export const CustomerDashboard: React.FC = () => {
     <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-10 space-y-6 sm:space-y-8">
       
       {/* Header with Customer Profile Card */}
-      <div className="card-3d-light rounded-3xl p-4 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+      <div className="app-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
         <div className="flex items-center gap-3.5 sm:gap-4">
-          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl icon-badge-3d-indigo text-white flex items-center justify-center font-bold text-2xl shrink-0">
-            <User className="w-7 h-7 sm:w-8 sm:h-8 text-white drop-shadow-sm" />
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-zinc-900 border border-zinc-800 text-white flex items-center justify-center font-bold text-2xl shrink-0 shadow-sm">
+            <User className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900">Kundpanel</h1>
-              <span className="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+              <h1 className="text-xl sm:text-2xl font-extrabold text-zinc-900">Kundpanel</h1>
+              <span className="text-[11px] font-semibold text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded border border-zinc-200">
                 Verifierat konto
               </span>
             </div>
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-500 mt-1">
-              <span className="font-medium text-slate-800">{currentUser.name}</span>
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-zinc-500 mt-1">
+              <span className="font-medium text-zinc-800">{currentUser.name}</span>
               <span aria-hidden="true">·</span>
               <span>{currentUser.phone}</span>
               <span aria-hidden="true">·</span>
-              <span className="flex items-center gap-1 text-cyan-700 font-medium">
+              <span className="flex items-center gap-1 text-emerald-600 font-medium">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>BankID-skyddad</span>
               </span>
@@ -299,53 +299,53 @@ export const CustomerDashboard: React.FC = () => {
         <div className="flex items-center gap-2.5 w-full sm:w-auto">
           <button
             onClick={() => setCurrentView('profile')}
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-3 min-h-[44px] rounded-xl btn-3d-white text-slate-700 font-semibold text-xs cursor-pointer"
+            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-4 py-2.5 min-h-[44px] rounded-xl bg-white hover:bg-zinc-50 border border-zinc-200 text-zinc-700 font-semibold text-xs cursor-pointer active:scale-[0.98] transition-all duration-120 ease-out"
           >
-            <User className="w-4 h-4 text-slate-500" />
+            <User className="w-4 h-4 text-zinc-500" />
             <span>Min profil</span>
           </button>
 
           <button
             onClick={() => setCurrentView('booking')}
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] rounded-xl btn-3d-cyan text-slate-950 font-bold text-xs cursor-pointer"
+            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-xs cursor-pointer active:scale-[0.98] transition-all duration-120 ease-out shadow-xs"
           >
-            <Plus className="w-4 h-4 text-slate-950 stroke-[2.5]" />
+            <Plus className="w-4 h-4 text-white stroke-[2.5]" />
             <span>Boka ny</span>
           </button>
         </div>
       </div>
 
-      {/* Quick Platform Metrics Ribbon with 3D cards */}
+      {/* Quick Platform Metrics Ribbon */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-        <div className="card-3d-light rounded-2xl p-3.5 sm:p-4">
-          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Aktiva uppdrag</span>
+        <div className="app-card rounded-2xl p-3.5 sm:p-4">
+          <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">Aktiva uppdrag</span>
           <div className="flex items-baseline gap-2 mt-1">
-            <span className="text-xl sm:text-2xl font-extrabold text-slate-900">{activeBookings.length}</span>
-            <span className="text-xs text-cyan-700 font-medium">pågående</span>
+            <span className="text-xl sm:text-2xl font-extrabold text-zinc-900">{activeBookings.length}</span>
+            <span className="text-xs text-zinc-500 font-medium">pågående</span>
           </div>
         </div>
 
-        <div className="card-3d-light rounded-2xl p-3.5 sm:p-4">
-          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Slutförda leveranser</span>
+        <div className="app-card rounded-2xl p-3.5 sm:p-4">
+          <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">Slutförda leveranser</span>
           <div className="flex items-baseline gap-2 mt-1">
-            <span className="text-xl sm:text-2xl font-extrabold text-emerald-700">{deliveredBookings.length}</span>
-            <span className="text-xs text-emerald-700 font-medium">genomförda</span>
+            <span className="text-xl sm:text-2xl font-extrabold text-emerald-600">{deliveredBookings.length}</span>
+            <span className="text-xs text-emerald-600 font-medium">genomförda</span>
           </div>
         </div>
 
-        <div className="card-3d-light rounded-2xl p-3.5 sm:p-4">
-          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Punktlighet</span>
+        <div className="app-card rounded-2xl p-3.5 sm:p-4">
+          <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">Punktlighet</span>
           <div className="flex items-baseline gap-2 mt-1">
-            <span className="text-xl sm:text-2xl font-extrabold text-slate-900">100%</span>
-            <span className="text-xs text-slate-500 font-medium">i tid</span>
+            <span className="text-xl sm:text-2xl font-extrabold text-zinc-900">100%</span>
+            <span className="text-xs text-zinc-500 font-medium">i tid</span>
           </div>
         </div>
 
-        <div className="card-3d-light rounded-2xl p-3.5 sm:p-4">
-          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Trygghetsnivå</span>
+        <div className="app-card rounded-2xl p-3.5 sm:p-4">
+          <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider block">Trygghetsnivå</span>
           <div className="flex items-baseline gap-2 mt-1">
-            <span className="text-xl sm:text-2xl font-extrabold text-cyan-700">BankID</span>
-            <span className="text-xs text-cyan-700 font-medium">skyddat</span>
+            <span className="text-xl sm:text-2xl font-extrabold text-emerald-600">BankID</span>
+            <span className="text-xs text-emerald-600 font-medium">skyddat</span>
           </div>
         </div>
       </div>
@@ -457,7 +457,7 @@ export const CustomerDashboard: React.FC = () => {
             displayedBookings.map((b) => (
               <div
                 key={b.id}
-                className="card-3d-light rounded-3xl p-6 transition-all space-y-4"
+                className="app-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 transition-all duration-120 ease-out space-y-4"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                   
@@ -533,10 +533,10 @@ export const CustomerDashboard: React.FC = () => {
 
                       <button
                         onClick={() => handleOpenTracking(b)}
-                        className="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold text-slate-900 btn-3d-white rounded-xl cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold text-zinc-900 bg-white hover:bg-zinc-50 border border-zinc-200 rounded-xl cursor-pointer active:scale-[0.98] transition-all duration-120 ease-out"
                       >
                         <span>Följ & Detaljer</span>
-                        <ChevronRight className="w-4 h-4 text-slate-500" />
+                        <ChevronRight className="w-4 h-4 text-zinc-500" />
                       </button>
                     </div>
                   </div>
@@ -555,7 +555,7 @@ export const CustomerDashboard: React.FC = () => {
       {/* DEDICATED SECTION: "Tidigare genomförda leveranser" */}
       {/* Visible either when 'delivered' tab is selected, or as a rich historical section when active bookings are viewed */}
       {(filterTab === 'delivered' || filterTab === 'active') && (
-        <div className="card-3d-light rounded-3xl p-6 sm:p-8 space-y-6 mt-8">
+        <div className="app-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-6 mt-8">
           
           {/* Section Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-100">
@@ -724,26 +724,26 @@ export const CustomerDashboard: React.FC = () => {
                     <div className="flex flex-wrap items-center gap-2">
                       <button
                         onClick={() => handleRepeatBooking(b)}
-                        className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 btn-3d-white rounded-lg cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-zinc-700 bg-white hover:bg-zinc-50 border border-zinc-200 rounded-lg cursor-pointer active:scale-[0.98] transition-all duration-120 ease-out"
                       >
-                        <RotateCcw className="w-3.5 h-3.5 text-slate-500" />
+                        <RotateCcw className="w-3.5 h-3.5 text-zinc-500" />
                         <span>Boka igen</span>
                       </button>
 
                       <button
                         onClick={() => handleOpenReceipt(b)}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-cyan-800 btn-3d-white rounded-lg cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-zinc-800 bg-white hover:bg-zinc-50 border border-zinc-200 rounded-lg cursor-pointer active:scale-[0.98] transition-all duration-120 ease-out"
                       >
-                        <Receipt className="w-3.5 h-3.5 text-cyan-700" />
+                        <Receipt className="w-3.5 h-3.5 text-zinc-600" />
                         <span>Visa kvitto</span>
                       </button>
 
                       <button
                         onClick={() => handleOpenTracking(b)}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white btn-3d-slate rounded-lg cursor-pointer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-zinc-900 hover:bg-zinc-800 rounded-lg cursor-pointer active:scale-[0.98] transition-all duration-120 ease-out shadow-xs"
                       >
                         <span>Se spårning & karta</span>
-                        <ChevronRight className="w-3.5 h-3.5 text-cyan-400" />
+                        <ChevronRight className="w-3.5 h-3.5 text-zinc-300" />
                       </button>
                     </div>
                   </div>

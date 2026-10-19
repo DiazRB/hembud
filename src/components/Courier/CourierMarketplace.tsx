@@ -20,7 +20,8 @@ import {
   Check,
   Navigation,
   ExternalLink,
-  User
+  User,
+  Footprints
 } from 'lucide-react';
 import { LiveDeliveryMap } from '../Map/LiveDeliveryMap';
 
@@ -343,6 +344,12 @@ export const CourierMarketplace: React.FC = () => {
                       <span className="bg-slate-100 px-2 py-1 rounded text-[11px] font-medium capitalize">
                         Storlek: <strong>{b.packageSize}</strong>
                       </span>
+                      {b.packageSize === 'small' && (
+                        <span className="bg-emerald-50 text-emerald-800 border border-emerald-200/80 px-2 py-1 rounded text-[11px] font-semibold flex items-center gap-1">
+                          <Footprints className="w-3 h-3 text-emerald-600" />
+                          <span>Gående / kollektivtrafik OK</span>
+                        </span>
+                      )}
                       {b.needsCarryingHelp && (
                         <span className="bg-amber-50 text-amber-800 border border-amber-200 px-2 py-1 rounded text-[11px] font-semibold">
                           Bärhjälp ingår (+95 kr)

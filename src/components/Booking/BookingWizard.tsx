@@ -1013,7 +1013,7 @@ export const BookingWizard: React.FC = () => {
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {[
-                    { id: 'small' as PackageSize, label: 'Litet paket', sub: 'Upp till 3 kg (Bok, kläder, påse)', fee: '+0 kr' },
+                    { id: 'small' as PackageSize, label: 'Litet paket', sub: 'Upp till 3 kg (Klaras även till fots)', fee: '+0 kr' },
                     { id: 'medium' as PackageSize, label: 'Mellanstort', sub: 'Upp till 10 kg (Flyttkartong)', fee: `+${pricingConfig.sizeSurcharges.medium} kr` },
                     { id: 'large' as PackageSize, label: 'Stort paket', sub: 'Upp till 25 kg (Stol, TV, skärm)', fee: `+${pricingConfig.sizeSurcharges.large} kr` },
                     { id: 'bulky' as PackageSize, label: 'Otympligt', sub: 'Möbler, kräver skåpbil', fee: `+${pricingConfig.sizeSurcharges.bulky} kr` },

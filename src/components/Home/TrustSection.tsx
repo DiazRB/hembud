@@ -26,44 +26,37 @@ export const TrustSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <section className="py-12 sm:py-20 bg-[#f8f9fa] border-b border-zinc-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-16 space-y-2 sm:space-y-3">
-          <p className="text-xs sm:text-sm font-bold tracking-wider text-cyan-600 uppercase">
+        <div className="max-w-3xl mb-10 sm:mb-14 space-y-2">
+          <p className="text-xs font-semibold uppercase tracking-wider text-zinc-500">
             Trygghet & Transparens
           </p>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-900 tracking-tight">
             Våra grundläggande principer
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-zinc-600 max-w-xl">
             Vi bygger en hållbar transporttjänst på ömsesidigt förtroende mellan beställare och oberoende bud.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {principles.map((p, idx) => {
             const Icon = p.icon;
-            const badgeClasses = [
-              'icon-badge-3d-cyan',
-              'icon-badge-3d-amber',
-              'icon-badge-3d-emerald',
-              'icon-badge-3d-indigo'
-            ];
-            const badgeClass = badgeClasses[idx % badgeClasses.length];
 
             return (
               <div
                 key={idx}
-                className="card-3d-light rounded-3xl p-5 sm:p-6 space-y-3.5"
+                className="app-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 space-y-3.5 transition-all duration-150 ease-out hover:border-zinc-300"
               >
-                <div className={`w-12 h-12 rounded-2xl ${badgeClass} flex items-center justify-center shrink-0`}>
-                  <Icon className="w-6 h-6 text-white drop-shadow-sm" />
+                <div className="w-11 h-11 rounded-xl bg-zinc-100 border border-zinc-200/80 flex items-center justify-center text-zinc-900 shrink-0">
+                  <Icon className="w-5 h-5 text-zinc-800" />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                <h3 className="text-base sm:text-lg font-bold text-zinc-900 tracking-tight">
                   {p.title}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
                   {p.description}
                 </p>
               </div>
