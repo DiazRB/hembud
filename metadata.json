@@ -1,0 +1,8 @@
+{
+  "name": "HemBud – Smart transport- och budplattform",
+  "description": "Smidig hämtning och leverans av paket, marknadsköp och ombudsförsändelser direkt till dörren.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
